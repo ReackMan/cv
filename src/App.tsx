@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Main from "./components/Main/Main";
+import {Header} from "./layout/header/Header";
+import Footer from "./layout/footer/Footer";
+import Main from "./layout/main/Main";
+import drawing from './assets/images/drawing.svg'
 
 function App() {
     return (
@@ -23,6 +24,10 @@ const StyledApp = styled.div`
 
   display: flex;
   flex-direction: column;
+  
+  background-image: url(${drawing});
+  background-position: 120% 20%;
+  background-repeat: no-repeat;
 `
 
 export default App;
