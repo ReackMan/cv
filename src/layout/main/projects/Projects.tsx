@@ -1,12 +1,14 @@
 import React from "react";
 import {Card} from "./card/Card";
-import project1 from '../../../assets/images/project1.png'
-import project2 from '../../../assets/images/project2.png'
-import project3 from '../../../assets/images/project3.png'
-import project4 from '../../../assets/images/project4.png'
-import project5 from '../../../assets/images/project5.png'
-import project6 from '../../../assets/images/project6.png'
+import project1 from '../../../assets/images/proj1.png'
+import project2 from '../../../assets/images/proj2.png'
+import project3 from '../../../assets/images/proj3.png'
+import project4 from '../../../assets/images/proj4.png'
+import project5 from '../../../assets/images/proj5.png'
+import project6 from '../../../assets/images/proj6.png'
 import {StyledCards, StyledProjects} from "./StyledProjects";
+import {Container} from "../../../components/Container";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 
 const cardInfo = [
     {
@@ -69,14 +71,18 @@ const cardInfo = [
 const Projects = () => {
     return (
         <StyledProjects>
-            <h2>Projects</h2>
-            <h3>Things I’ve built so far</h3>
-            <StyledCards>
-                {cardInfo.map((card) => (
-                    <Card titleSize={card.titleSize} imgSrc={card.imgSrc} headerText={card.headerText}
-                          cardText={card.cardText} stackText={card.stackText}/>
-                ))}
-            </StyledCards>
+            <Container>
+                <FlexWrapper direction='column'>
+                    <h2>Projects</h2>
+                    <h3>Things I’ve built so far</h3>
+                    <StyledCards>
+                        {cardInfo.map((card) => (
+                            <Card titleSize={card.titleSize} imgSrc={card.imgSrc} headerText={card.headerText}
+                                  cardText={card.cardText} stackText={card.stackText}/>
+                        ))}
+                    </StyledCards>
+                </FlexWrapper>
+            </Container>
         </StyledProjects>
     )
 }

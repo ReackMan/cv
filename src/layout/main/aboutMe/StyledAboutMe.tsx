@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledAboutMe = styled.section`
+export const StyledAboutMe = styled.section<{ ref?: any }>`
   display: flex;
   flex-direction: column;
   gap: 38px;

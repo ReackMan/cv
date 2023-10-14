@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
-export const StyledWelcome = styled.section`
+
+
+export const StyledWelcome = styled.section<{ ref: any }>`
   display: flex;
 
-  padding: 19px 10px 0 0;
+  padding-right: 19px;
+  padding-top: 10px;
+  justify-content: space-between;
   align-items: center;
-  gap: 100px;
+  //gap: 100px;
 
   height: 350px;
+  
 
-  margin-bottom: 200px;
   
   p {
     margin: 0;
@@ -17,13 +21,13 @@ export const StyledWelcome = styled.section`
   }
 `
 export const WelcomeText = styled.text`
-  
-  flex-basis: 696px;
+  display: block;
+  //flex-basis: 696px;
+  min-width: 494px;
   
   color: var(--Solid-Heading, #42446E);
   font-family: Poppins,sans-serif;
   font-size: 58px;
-  font-style: normal;
   font-weight: 700;
   line-height: 70px; /* 120.69% */
   letter-spacing: -1px;
@@ -54,6 +58,7 @@ export const WelcomeName = styled.text`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
-export const WelcomeImg = styled.img`
+export const WelcomeImg = styled.img<{ ref: any }>`
   object-fit: cover;
+  
 `

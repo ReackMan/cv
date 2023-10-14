@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyledMenu} from "./StyledMenu";
+import {Link, List, ListItem, Mask, StyledMenu} from "./StyledMenu";
 
 export type MenuPropsType = {
     alignItems?: string
@@ -18,13 +18,21 @@ const tabs = [
 export const Menu = (props: MenuPropsType) => {
     return (
         <StyledMenu alignItems={props.alignItems} justContent={props.justContent} color={props.color}>
-            <ul>
+            <List>
                 {tabs.map((tab, index) => (
-                    <li key={index}>
-                        <a href={tab.href}> {tab.tabName} </a>
-                    </li>
+                    <ListItem key={index}>
+                        <Link href={tab.href}>
+                            {tab.tabName}
+                            <Mask>
+                                <span>{tab.tabName}</span>
+                            </Mask>
+                            <Mask>
+                                <span>{tab.tabName}</span>
+                            </Mask>
+                        </Link>
+                    </ListItem>
                 ))}
-            </ul>
+            </List>
         </StyledMenu>
     );
 };

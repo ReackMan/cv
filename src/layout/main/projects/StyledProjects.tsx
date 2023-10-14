@@ -4,7 +4,6 @@ export const StyledProjects = styled.section`
   display: flex;
   flex-direction: column;
 
-  margin: 0 0 184px 0;
 
   h2 {
     color: var(--Solid-Heading, #42446E);
@@ -33,7 +32,7 @@ export const StyledProjects = styled.section`
 `
 export const StyledCards = styled.div`
   display: flex;
-  gap: 62px 26px;
+  gap: 62px 22px;
   
   flex-wrap: wrap;
   justify-content: space-between;

@@ -1,16 +1,10 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
-  display: grid;
-  grid-template-areas: 
-  'logo contacts socials'
-  'svg svg svg'
-  'menu description description';
-  
-  grid-template-columns: 6fr 4fr 2fr;
 
-  margin: 0 49px 60px 38px; 
+  margin: 0 49px 30px 38px; 
   height: 176px;
+  width: 100%;
   
   p {
     display: flex;

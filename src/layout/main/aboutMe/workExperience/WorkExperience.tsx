@@ -1,8 +1,34 @@
 import React from "react";
 import {WorkPlace} from "./WorkPlace";
 import {StyledWorkExperience} from "./StyledWorkExperience";
+import gsap from "gsap";
+// @ts-ignore
+// import {ScrollTrigger} from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger);
 
-const WorkExperience = () => {
+const WorkExperience = (ref?: any) => {
+
+
+    // const h2 = useRef(null)
+    // // const wExp = useRef()
+    //
+    // useLayoutEffect(() => {
+    //     let ctx = gsap.context(() => {
+    //         // @ts-ignore
+    //
+    //
+    //         gsap.fromTo(h2.current, {scale: 0}, {
+    //             y: -400, duration: 3, scale: 1.4,
+    //             scrollTrigger: {
+    //                 // @ts-ignore
+    //                 trigger: h2
+    //             },
+    //         })
+    //     },)
+    //     return () => ctx.revert();
+    // }, []);
+
+
     return (
         <StyledWorkExperience>
             <h2>Work Experience</h2>

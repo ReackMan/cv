@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const StyledCard = styled.div`
   background-color: #fff;
-  width: 318px;
+  width: 30%;
+  height: 585px;
   display: flex;
   flex-direction: column;
   //justify-content: space-between;
@@ -15,8 +16,9 @@ export const StyledCard = styled.div`
   
 `
 export const BtnBox = styled.div`
-  margin: 0 25px 21px 15px;
+  //margin: 0 25px 21px 15px;
+  margin-left: 15px;
   align-self: start;
   display: flex;
-  gap: 40px;
+  gap: 25px;
 `

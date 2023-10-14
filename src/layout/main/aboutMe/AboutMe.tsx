@@ -5,6 +5,7 @@ import Education from "./education/Education";
 import {StyledAboutMe} from "./StyledAboutMe";
 
 const AboutMe = () => {
+
     return (
         <StyledAboutMe>
             <About/>
