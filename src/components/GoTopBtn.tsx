@@ -5,7 +5,6 @@ import {Icon} from "./icon/Icon";
 
 
 export const GoTopBtn = () => {
-    debugger
     const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {

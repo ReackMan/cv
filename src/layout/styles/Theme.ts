@@ -15,6 +15,7 @@ export const lightTheme = {
     text: theme.colors.accentLight,
     toggleBorder: '#FFF',
     bckGround: '#363537',
+    img: 'sun'
 
 }
 
@@ -24,6 +25,7 @@ export const darkTheme = {
     text: theme.colors.accentDark,
     toggleBorder: '#6B8096',
     bckGround: '#999',
+    img: 'moon'
 
 }
 
