@@ -7,11 +7,12 @@ type StyledLinkPropsType = {
     width: string
     height: string
     viewBox: string
+    theme: any
 }
 
 const Link = (props: StyledLinkPropsType) => {
     return (
-        <StyledLink>
+        <StyledLink theme={props.theme}>
             <Logo iconId={props.iconId} width={props.width} height={props.height}
                   viewBox={props.viewBox} text={props.text}/>
         </StyledLink>

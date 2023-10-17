@@ -7,7 +7,7 @@ import {StyledEducationPlace} from "./StyledEducation";
 
 export const EducationPlace = (props: PlacePropsType) => {
     return (
-        <StyledEducationPlace>
+        <StyledEducationPlace theme={props.theme}>
             <h3>{props.position}</h3>
             <button>{props.schedule}</button>
             <Organization iconId='office' width="16" height="12" viewBox="0 0 16 12" orgName={props.orgName}/>

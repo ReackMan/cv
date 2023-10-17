@@ -4,6 +4,8 @@ export type PlacePropsType= {
     orgName: string
     dates: string
     place?: string
+    theme?: any
+    queue?: string
 }
 
 export type OrganizationPropsType= {

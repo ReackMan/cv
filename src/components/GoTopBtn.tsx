@@ -4,7 +4,7 @@ import {Icon} from "./icon/Icon";
 
 
 
-export const GoTopBtn = () => {
+export const GoTopBtn = (props: any) => {
     const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export const GoTopBtn = () => {
         <StyledGoTopBtn showGoTop={isVisible}>
             <button onClick={() => scrollUp()}>
                 <span>
-                    <Icon iconId='goUpArrow3' width="45px" height="45px" viewBox="3 0 21 21"/>
+                    <Icon iconId={props.theme === 'light' ? 'goTopArrow4' : 'goTopArrow3'} width="45px" height="45px" viewBox="3 0 21 21"/>
                 </span>
             </button>
         </StyledGoTopBtn>
@@ -37,18 +37,16 @@ export const GoTopBtn = () => {
 const StyledGoTopBtn = styled.div<{ showGoTop: boolean }>`
   
   button {
-    display: ${ props => props.showGoTop === true ? 'block' : 'none' || 'none'};
+    display: ${ props => props.showGoTop === true ? 'block' : 'none'};
   }
   
   span {
     position: fixed;
-    //background: rgba(252, 248, 241, 0.8);
-    //box-shadow: 2px 2px 5px yellow;
     width: 40px;
     height: 50px;
     border-radius: 25px;
     bottom: 5%;
-    left: 92%;
+    right: 5%;
     cursor: pointer;
     text-align: center;
     line-height: 30px;

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const StyledLink = styled.div`
+export const StyledLink = styled.div<{ theme: any }>`
   
   span {
-    color: #000;
-    font-family: Poppins, sans-serif;
+    color: ${props => props.theme === 'light'
+            ? '#000' : "#fff"};
     line-height: 26px; /* 162.5% */
     text-decoration-line: underline;
     margin-left: 10px;

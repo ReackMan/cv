@@ -1,34 +1,10 @@
 import styled from "styled-components";
 
-export const StyledProjects = styled.section`
+export const StyledProjects = styled.section<{ theme: any }>`
   display: flex;
   flex-direction: column;
-
-
-  h2 {
-    color: var(--Solid-Heading, #42446E);
-    text-align: center;
-    font-family: Poppins, sans-serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px; /* 54.167% */
-
-    margin: 0 0 49px 0;
-  }
-
-  h3 {
-    color: var(--dark-content, #666);
-    text-align: center;
-    font-family: Poppins, sans-serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 81.25% */
-
-    margin: 0 0 110px 0;
-  }
-
+  
+  
 `
 export const StyledCards = styled.div`
   display: flex;
@@ -42,5 +18,35 @@ export const StyledCards = styled.div`
 
   &:last-child {
     padding-bottom: 0;
+  }
+  
+  @media screen and (max-width: 944px) {
+    justify-content: space-around;
+  }
+  
+  @media screen and (max-width: 632px) {
+    justify-content: center;
+  }
+`
+
+export const ProjectsHeader = styled.div`
+  h2 {
+
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 26px; /* 54.167% */
+
+    margin: 0 0 49px 0;
+  }
+
+  h3 {
+
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 26px; /* 81.25% */
+
+    margin: 0 0 110px 0;
   }
 `

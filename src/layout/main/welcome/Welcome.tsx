@@ -3,7 +3,7 @@ import React, {useLayoutEffect, useRef} from "react";
 import avatar from '../../../assets/images/avatar.png'
 import {StyledWelcome, WelcomeImg, WelcomeName, WelcomeText} from "./StyledWelcome";
 
-const Welcome = () => {
+const Welcome = (props: any) => {
 
     const comp = useRef(); // create a ref for the root level element (for scoping)
     const circle = useRef();
@@ -27,13 +27,13 @@ const Welcome = () => {
 
         return () => ctx.revert(); // cleanup
 
-    }, []); // <- empty dependency Array so it doesn't re-run on every render
+    }, []); // <- empty dependency Array, so it doesn't re-run on every render
 
 // ...
 
     return (
         <StyledWelcome ref={comp}>
-            <WelcomeText>
+            <WelcomeText theme={props.theme}>
                 <p>Hi 👋,</p>
                 <p>My name is</p>
                 <WelcomeName> Artem DM </WelcomeName>

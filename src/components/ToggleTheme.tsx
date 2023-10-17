@@ -1,18 +1,14 @@
-import React, {useState} from 'react';
-import styled, {DefaultTheme} from 'styled-components'
+import React from 'react';
+import styled from 'styled-components'
 import {Icon} from "./icon/Icon";
-import {theme} from "../layout/styles/Theme";
 
-// type ToggleThemeProps = {
-//     theme?: DefaultTheme | undefined
-//     themeToggle: any
-// }
+type ToggleThemeProps = {
+    theme?: string
+    themeToggle: any
+}
 
-export const ToggleTheme = (props: any) => {
-    debugger
+export const ToggleTheme = (props: ToggleThemeProps) => {
 
-    const [isChecked, setIsChecked] = useState(false);
-    const handleToggle = () => setIsChecked(!isChecked);
 
     return (
 
@@ -23,10 +19,59 @@ export const ToggleTheme = (props: any) => {
 };
 
 const StyledTogglerButton = styled.div`
-   background: ${({theme}) => theme.img};
-  
+  background: ${({theme}) => theme.img};
+
   align-self: center;
   height: 40px;
   width: 40px;
-  
+
 `
+
+const Label = styled.label<{ placeBtn: any }>`
+  //width: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+
+  @media screen and (max-width: ${props => 
+          props.placeBtn === 'header' ? '768px' : ''}) {
+    display: none;
+  }
+`
+
+const Input = styled.input<{ theme: any }>`
+  position: absolute;
+  left: -99999px;
+  top: -99999px;
+
+
+`
+
+const Slider = styled.span<{ theme: any }>`
+  
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  background-color: ${props => props.theme === 'light' ? '#bfbfbf' : '#1890ff'};
+  position: relative;
+  transition: background-color 0.2s;
+
+    width: 62px;
+    height: 29px;
+`
+
+export const ToggleBtn = (props: any) => {
+
+    return (
+        <Label placeBtn={props.placeBtn}>
+            <Input theme={props.theme} type='checkbox' onChange={() => props.themeToggle()}/>
+            <Slider theme={props.theme}>
+                <Icon iconId={props.theme === 'light' ? 'moon' : 'sun2'} width='80px'
+                      height='40px' viewBox={props.theme === 'light' ? '18.6 -3 94 70' : '-15 2 55 60'}/>
+            </Slider>
+        </Label>
+    )
+
+}

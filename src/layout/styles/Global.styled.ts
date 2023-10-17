@@ -1,35 +1,7 @@
 import {createGlobalStyle} from "styled-components";
+import {mainTheme} from "./Theme";
 
-// export const GlobalStyle = createGlobalStyle`
-  
-  // *,
-  // *::after,
-  // *::before {
-  //   margin: 0;
-  //   padding: 0;
-  //   box-sizing: border-box;
-  // }
-  //
-  //
-  // body {
-  //   background: ${({theme}) => theme.body};
-  //
-  //   color: ${({theme}) => theme.text};
-  //
-  //   transition: all 0.50s linear;
-  //
-  //   margin: 0;
-  //   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  //   sans-serif;
-  //   -webkit-font-smoothing: antialiased;
-  //   -moz-osx-font-smoothing: grayscale;
-  // }
-
-  
-// `
-
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<{ customTheme: any }>`
 
   *,
   *::after,
@@ -70,6 +42,22 @@ export const GlobalStyle = createGlobalStyle`
   section {
     margin-bottom: 200px;
     padding: 0 15px;
+  }
+  
+  h2 {
+    margin: 0;
+    color: ${props => props.customTheme === 'light' 
+            ? mainTheme.colors.accentLight : mainTheme.colors.accentDark};
+  }
+
+  h3 {
+    color: ${props => props.customTheme === 'light'
+            ? mainTheme.colors.fontLight : mainTheme.colors.fontDark};
+  }
+
+  p {
+    color: ${props => props.customTheme === 'light' ?
+            mainTheme.colors.fontLight : mainTheme.colors.customText};
   }
   
 `;

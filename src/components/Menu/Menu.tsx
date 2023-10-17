@@ -5,6 +5,10 @@ export type MenuPropsType = {
     alignItems?: string
     justContent?: string
     color?: string
+    theme: any
+    asas?: string
+    placeMenu?: string
+    flexGrow?: string
 }
 
 const tabs = [
@@ -17,16 +21,17 @@ const tabs = [
 
 export const Menu = (props: MenuPropsType) => {
     return (
-        <StyledMenu alignItems={props.alignItems} justContent={props.justContent} color={props.color}>
-            <List>
+        <StyledMenu alignItems={props.alignItems} justContent={props.justContent}
+                    color={props.color} placeMenu={props.placeMenu} flexGrow={props.flexGrow}>
+            <List placeMenu={props.placeMenu}>
                 {tabs.map((tab, index) => (
-                    <ListItem key={index}>
+                    <ListItem key={index} theme={props.theme}>
                         <Link href={tab.href}>
                             {tab.tabName}
-                            <Mask>
+                            <Mask theme={props.theme}>
                                 <span>{tab.tabName}</span>
                             </Mask>
-                            <Mask>
+                            <Mask theme={props.theme}>
                                 <span>{tab.tabName}</span>
                             </Mask>
                         </Link>

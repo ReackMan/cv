@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const StyledSocialNetworks = styled.div`
+export const StyledSocialNetworks = styled.div<{ padding?: string, placeSocials?: string }>`
   order: 3;
   grid-area: socials;
   flex-basis: 181px;
+  padding-right: ${props => props.padding};
   
   text-align: end;
   
@@ -12,4 +13,9 @@ export const StyledSocialNetworks = styled.div`
   
   justify-content: flex-end;
   align-items: center;
+
+  @media screen and (max-width: ${props =>
+          props.placeSocials === 'header' ? '935px' : ''}) {
+    display: none;
+  }
 `

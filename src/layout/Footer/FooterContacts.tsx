@@ -1,22 +1,34 @@
 import React from "react";
 import styled from "styled-components";
+import {mainTheme} from "../styles/Theme";
 
 
-export const FooterContacts = () => {
+export const FooterContacts = (props: any) => {
     return (
-        <StyledFooterContacts>
-            <span>+91 12345 09876</span>
-            <span>info@example.com</span>
+        <StyledFooterContacts theme={props.theme}>
+            <span>+7(916)298-84-34</span>
+            <span>reackman@yandex.ru</span>
         </StyledFooterContacts>
     )
 }
 
-const StyledFooterContacts = styled.div`
+const StyledFooterContacts = styled.div<{ theme: any }>`
   grid-area: contacts;
   flex-basis: 609px;
   
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 64px;
+  //gap: 64px;
+  color: ${props => props.theme === 'light' ?
+          mainTheme.colors.fontLight : mainTheme.colors.customText};
+  
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+   
+  @media screen and (max-width: 576px) {
+    justify-content: center;
+  }
+  
 `

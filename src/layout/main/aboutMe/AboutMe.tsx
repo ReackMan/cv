@@ -4,13 +4,13 @@ import WorkExperience from "./workExperience/WorkExperience";
 import Education from "./education/Education";
 import {StyledAboutMe} from "./StyledAboutMe";
 
-const AboutMe = () => {
+const AboutMe = (props: any) => {
 
     return (
         <StyledAboutMe>
-            <About/>
-            <WorkExperience/>
-            <Education/>
+            <About theme={props.theme}/>
+            <WorkExperience theme={props.theme}/>
+            <Education theme={props.theme}/>
         </StyledAboutMe>
     )
 }

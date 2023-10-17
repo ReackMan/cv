@@ -9,16 +9,16 @@ import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import abstract from '../../assets/images/abstract.png'
 
-const Main = () => {
+const Main = (props: any) => {
     return (
         <StyledMain>
             <Container>
                 <FlexWrapper direction='column'>
-                    <Welcome/>
-                    <AboutMe/>
-                    <TechStack/>
-                    <Projects/>
-                    <MailMe/>
+                    <Welcome theme={props.theme}/>
+                    <AboutMe theme={props.theme}/>
+                    <TechStack theme={props.theme}/>
+                    <Projects theme={props.theme}/>
+                    <MailMe theme={props.theme}/>
                 </FlexWrapper>
             </Container>
         </StyledMain>

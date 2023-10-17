@@ -1,18 +1,21 @@
-export const theme = {
+export const mainTheme = {
     colors: {
-        lightBg: '#fff',
-        darkBg: '#191919',
+        lightPrimaryBg: '#fff',
+        darkPrimaryBg: '#191919',
         accentLight: '#42446E',
         fontLight: '#666',
         accentDark: '#D9D9D9',
-        fontDark: '#CCC'
+        fontDark: '#CCC',
+        lightProjBg: '#FFF',
+        darkProjBg: '#363636',
+        customText: '#A7A7A7'
     }
 }
 
 export const lightTheme = {
 
-    body: theme.colors.lightBg,
-    text: theme.colors.accentLight,
+    body: mainTheme.colors.lightPrimaryBg,
+    text: mainTheme.colors.accentLight,
     toggleBorder: '#FFF',
     bckGround: '#363537',
     img: 'sun'
@@ -21,8 +24,8 @@ export const lightTheme = {
 
 export const darkTheme = {
 
-    body: theme.colors.darkBg,
-    text: theme.colors.accentDark,
+    body: mainTheme.colors.darkPrimaryBg,
+    text: mainTheme.colors.accentDark,
     toggleBorder: '#6B8096',
     bckGround: '#999',
     img: 'moon'

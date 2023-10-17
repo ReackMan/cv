@@ -5,6 +5,7 @@ export const StyledAboutMe = styled.section<{ ref?: any }>`
   flex-direction: column;
   gap: 38px;
   
-  width: 710px;
+  max-width: 710px;
+  width: 100%;
   margin-bottom: 200px;
 `

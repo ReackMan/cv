@@ -7,7 +7,7 @@ import {StyledWorkPlace} from "./StyledWorkExperience";
 
 export const WorkPlace = (props: PlacePropsType) => {
     return (
-        <StyledWorkPlace>
+        <StyledWorkPlace theme={props.theme} queue={props.queue}>
             <h3>{props.position}</h3>
             <button>{props.schedule}</button>
             <Organization iconId='office' width="16" height="12" viewBox="0 0 16 12" orgName={props.orgName}/>

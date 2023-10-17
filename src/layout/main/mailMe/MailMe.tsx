@@ -1,11 +1,14 @@
 import React from "react";
 import {StyledMailMe} from "./StyledMailMe";
 
-const MailMe = () => {
+const MailMe = (props: any) => {
     return (
-        <StyledMailMe>
+        <StyledMailMe theme={props.theme}>
             <h2>For any questions please mail me:</h2>
-            <a href="">reackman@yandex.ru</a>
+            <p>
+                <a href="">reackman</a>
+                <a href="">@yandex.ru</a>
+            </p>
         </StyledMailMe>
     )
 }

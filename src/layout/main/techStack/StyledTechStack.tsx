@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledTechStack = styled.section`
+export const StyledTechStack = styled.section<{ theme: any }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,32 +14,50 @@ export const StyledTechStack = styled.section`
   }
 
   h2 {
-    color: #42446E;
     text-align: center;
-    font-family: Poppins, sans-serif;
     font-size: 48px;
-    font-style: normal;
     font-weight: 700;
-    line-height: 26px; /* 54.167% */
 
     margin: 0 0 49px 0;
   }
 
   h3 {
-    color: var(--dark-content, #666);
     text-align: center;
-    font-family: Poppins, sans-serif;
     font-size: 32px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 26px; /* 81.25% */
 
     margin: 0 0 124px 0;
   }
+  
+ 
 `
 export const StyledStack = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 82px 50px;
+  row-gap: 82px;
   justify-content: space-between;
+  align-items: center;
+  
+  svg {
+    width: 16%;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    svg {
+      width: 25%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    svg {
+      width: 33%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    svg {
+      width: 50%;
+    }
+  }
+  
 `
