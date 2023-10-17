@@ -20,11 +20,11 @@ function App() {
 
         <StyledApp>
             <ThemeProvider theme={themeMode}>
-                <GlobalStyle/>
-                <Header theme={theme} themeToggle={themeToggle}/>
-                <Main/>
-                <Footer/>
-                <GoTopBtn/>
+                    <GlobalStyle customTheme={theme}/>
+                    <Header theme={theme} themeToggle={themeToggle} />
+                    <Main theme={theme}/>
+                    <Footer theme={theme}/>
+                    <GoTopBtn theme={theme}/>
             </ThemeProvider>
         </StyledApp>
 
