@@ -21,7 +21,7 @@ export const StyledWelcome = styled.section<{ ref: any }>`
 export const WelcomeText = styled.text<{ theme: any }>`
   display: block;
   //flex-basis: 696px;
-  min-width: 494px;
+  //min-width: 494px;
   
   color: ${props => props.theme === 'light' 
           ?  mainTheme.colors.accentLight : mainTheme.colors.accentDark};
