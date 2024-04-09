@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import About from "./about/About";
 import WorkExperience from "./workExperience/WorkExperience";
 import Education from "./education/Education";

@@ -9,20 +9,15 @@ export type BurgerMenuPropsType = {
     theme?: any
     asas?: string
     isMenuOpen?: any
-    toggleBurgerMenu?: any
     themeToggle?: any
     menuRef?:any
 }
 
-const tabs = [
-    { href: '#home', tabName: 'Home' },
-    { href: '#about', tabName: 'About' },
-    { href: '', tabName: 'Tech Stack' },
-    { href: '', tabName: 'Projects' },
-    { href: '', tabName: 'Contact' }
-]
+type PropsType = {
+    tabs: {href: string, tabName: string}[]
+}
 
-export const BurgerMenu = (props: BurgerMenuPropsType) => {
+export const BurgerMenu = ({tabs, ...props}: BurgerMenuPropsType & PropsType) => {
 
     return (
         <StyledBurgerMenu id={'burger_menu'} alignItems={props.alignItems} justContent={props.justContent}

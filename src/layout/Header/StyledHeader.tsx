@@ -4,10 +4,11 @@ import {mainTheme} from "../styles/Theme";
 export const StyledHeader = styled.header<{ theme: any }>`
   //display: flex;
 
-  margin: 41px 49px 220px 38px;
+  margin: 20px 49px 220px 38px;
 
   background-color: ${props => props.theme === 'light' 
-          ? '#D7FFE0' : mainTheme.colors.accentLight};
+          ? 'rgba(255,255,255,0.18)' : mainTheme.colors.accentLight};
+          //? '#D7FFE0' : mainTheme.colors.accentLight};
   position: fixed;
   top: 0;
   left: 0;

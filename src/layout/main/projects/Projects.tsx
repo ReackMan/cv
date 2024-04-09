@@ -1,76 +1,54 @@
 import React from "react";
 import {Card} from "./card/Card";
-import project1 from '../../../assets/images/proj1.png'
-import project2 from '../../../assets/images/proj2.png'
-import project3 from '../../../assets/images/proj3.png'
-import project4 from '../../../assets/images/proj4.png'
-import project5 from '../../../assets/images/proj5.png'
-import project6 from '../../../assets/images/proj6.png'
+import todolist from '../../../assets/images/todolist-fon.png'
+import socNet from '../../../assets/images/social-network.png'
+import counter from '../../../assets/images/counter.png'
 import {ProjectsHeader, StyledCards, StyledProjects} from "./StyledProjects";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {TechIconAnimation} from "../../../animations/Animations";
 
 const cardInfo = [
     {
-        cardText: `This is sample project description random
-                    things are here in description This is sample
-                    project lorem ipsum generator for dummy content`,
-        headerText: 'Project Tile goes here',
-        stackText: ' HTML , JavaScript, SASS, React',
-        imgSrc: project1,
-        titleSize: '28px'
+        cardText: `ToDo List is an online platform for organizing 
+                    your personal or work tasks which can help you 
+                    to increase the productivity, prioritise tasks, 
+                    manage tasks effectively and improve time management.`,
+        headerText: 'Todolist',
+        stackText: 'Typescript, React, Redux-toolkit, Axios, Jest, Material UI, Storybook, Styled Components',
+        imgSrc: todolist,
+        titleSize: '28px',
+        gitHub: 'https://github.com/ReackMan/todolist',
+        href: 'https://reackman.github.io/todolist'
     },
     {
-        cardText: `This is sample project description random
-                    things are here in description This is sample
-                    project lorem ipsum generator for dummy content`,
-        headerText: 'Project Tile goes here',
-        stackText: ' HTML , JavaScript, SASS, React',
-        imgSrc: project2,
-        titleSize: '28px'
+        cardText: `Social Network is an online platform that allows people 
+                    to create an account and interact with other people on the website. 
+                    Users can build there virtual world on the site, make friends and share 
+                    their thoughts and ideas by writing a post.`,
+        headerText: 'Social Network',
+        stackText: 'Typescript, React, Redux, React Router, Jest, CSS modules',
+        imgSrc: socNet,
+        titleSize: '28px',
+        gitHub: 'https://github.com/ReackMan/todolist',
+        href: 'https://reackman.github.io/todolist'
     },
     {
-        cardText: `This is sample project description random
-                    things are here in description This is sample
-                    project lorem ipsum generator for dummy content`,
-        headerText: 'Project Tile goes here',
-        stackText: ' HTML , JavaScript, SASS, React',
-        imgSrc: project3,
-        titleSize: '28px'
-    },
-    {
-        cardText: `This is sample project description random
-                    things are here in description This is sample
-                    project lorem ipsum generator for dummy content`,
-        headerText: 'Project Tile goes here',
-        stackText: ' HTML , JavaScript, SASS, React',
-        imgSrc: project4,
-        titleSize: '28px'
-    },
-    {
-        cardText: `This is sample project description random
-                    things are here in description This is sample
-                    project lorem ipsum generator for dummy content`,
-        headerText: 'Project Tile goes here',
-        stackText: ' HTML , JavaScript, SASS, React',
-        imgSrc: project5,
-        titleSize: '28px'
-    },
-    {
-        cardText: `This is sample project description random
-                    things are here in description This is sample
-                    project lorem ipsum generator for dummy content`,
-        headerText: 'Project Tile goes here',
-        stackText: ' HTML , JavaScript, SASS, React',
-        imgSrc: project6,
-        titleSize: '28px'
+        cardText: `A small project of the counter on the React library, data is written 
+                    to localStorage, two versions of the counter are made: 1. React / Redux 
+                    bundle is connected, 2. the counter is made using the useState hook`,
+        headerText: 'Counter',
+        stackText: 'HTML, Styled Components, React, Redux',
+        imgSrc: counter,
+        titleSize: '28px',
+        gitHub: 'https://github.com/ReackMan/counter',
+        href: 'https://reackman.github.io/counter'
     }
-
 ]
 
 const Projects = (props: any) => {
     return (
-        <StyledProjects theme={props.theme}>
+        <StyledProjects id='projects' theme={props.theme}>
             <Container>
                 <FlexWrapper direction='column'>
                     <ProjectsHeader>
@@ -78,9 +56,10 @@ const Projects = (props: any) => {
                         <h3>Things I’ve built so far</h3>
                     </ProjectsHeader>
                     <StyledCards>
-                        {cardInfo.map((card) => (
-                            <Card titleSize={card.titleSize} imgSrc={card.imgSrc} headerText={card.headerText}
-                                  cardText={card.cardText} stackText={card.stackText} theme={props.theme}/>
+                        {cardInfo.map((card, index) => (
+                                <Card titleSize={card.titleSize} imgSrc={card.imgSrc} headerText={card.headerText}
+                                      cardText={card.cardText} stackText={card.stackText} theme={props.theme}
+                                      href={card.href} gitHub={card.gitHub}/>
                         ))}
                     </StyledCards>
                 </FlexWrapper>

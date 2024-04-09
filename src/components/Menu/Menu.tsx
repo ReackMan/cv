@@ -11,15 +11,11 @@ export type MenuPropsType = {
     flexGrow?: string
 }
 
-const tabs = [
-    { href: '#home', tabName: 'Home' },
-    { href: '#about', tabName: 'About' },
-    { href: '', tabName: 'Tech Stack' },
-    { href: '', tabName: 'Projects' },
-    { href: '', tabName: 'Contact' }
-]
+type PropsType = {
+    tabs: {href: string, tabName: string}[]
+}
 
-export const Menu = (props: MenuPropsType) => {
+export const Menu = ({tabs, ...props}: MenuPropsType & PropsType) => {
     return (
         <StyledMenu alignItems={props.alignItems} justContent={props.justContent}
                     color={props.color} placeMenu={props.placeMenu} flexGrow={props.flexGrow}>

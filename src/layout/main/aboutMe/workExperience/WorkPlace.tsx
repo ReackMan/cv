@@ -6,6 +6,8 @@ import React from "react";
 import {StyledWorkPlace} from "./StyledWorkExperience";
 
 export const WorkPlace = (props: PlacePropsType) => {
+
+
     return (
         <StyledWorkPlace theme={props.theme} queue={props.queue}>
             <h3>{props.position}</h3>

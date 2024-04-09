@@ -11,7 +11,7 @@ export const CardText = (props: CardTextPropsType) => {
     return (
         <StyledCardText theme={props.theme}>
             <span>{props.cardText}</span>
-            <p>Tech stack:{props.stackText}</p>
+            <p>Tech stack: {props.stackText}</p>
         </StyledCardText>
     )
 }

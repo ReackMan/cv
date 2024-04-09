@@ -15,7 +15,7 @@ export const StyledSocialNetworks = styled.div<{ padding?: string, placeSocials?
   align-items: center;
 
   @media screen and (max-width: ${props =>
-          props.placeSocials === 'header' ? '935px' : ''}) {
+          props.placeSocials === 'header' ? '955px' : ''}) {
     display: none;
   }
 `

@@ -1,4 +1,5 @@
 import {useState, useEffect, useCallback} from 'react';
+import {useWindowDimensions} from "../useWindowDimensions";
 
 export const useBurgerMenu = (): [boolean, () => void] => {
 

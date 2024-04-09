@@ -1,14 +1,20 @@
 import gsap from "gsap";
 import React, {useLayoutEffect, useRef} from "react";
-import avatar from '../../../assets/images/avatar.png'
+import avatar from '../../../assets/images/avaMe.png'
 import {StyledWelcome, WelcomeImg, WelcomeName, WelcomeText} from "./StyledWelcome";
+import {WelcomeHello, WelcomeImgBlock} from "../../../animations/Animations";
+import {getWindowDimensions} from "../../../components/useWindowDimensions";
 
 const Welcome = (props: any) => {
 
     const comp = useRef(); // create a ref for the root level element (for scoping)
     const circle = useRef();
 
+    const {widthInner, heightInner} = getWindowDimensions()
+
     useLayoutEffect(() => {
+
+        if (widthInner < 949) return () => {}
 
         // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
         let ctx = gsap.context(() => {
@@ -27,19 +33,23 @@ const Welcome = (props: any) => {
 
         return () => ctx.revert(); // cleanup
 
-    }, []); // <- empty dependency Array, so it doesn't re-run on every render
+    }, [widthInner, heightInner]); // <- empty dependency Array, so it doesn't re-run on every render
 
 // ...
 
     return (
         <StyledWelcome ref={comp}>
             <WelcomeText theme={props.theme}>
-                <p>Hi 👋,</p>
+                <p>
+                    Hi <WelcomeHello>👋</WelcomeHello>,
+                </p>
                 <p>My name is</p>
-                <WelcomeName> Artem DM </WelcomeName>
+                <WelcomeName> Artem Mashoshin </WelcomeName>
                 <h1>A Web Developer</h1>
             </WelcomeText>
-            <WelcomeImg ref={circle} src={avatar}/>
+            <WelcomeImgBlock ref={circle}>
+                <WelcomeImg src={avatar}/>
+            </WelcomeImgBlock>
         </StyledWelcome>
     )
 }

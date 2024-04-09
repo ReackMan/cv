@@ -11,11 +11,13 @@ export const StyledBurgerMenu = styled.nav<BurgerMenuPropsType>`
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  top: 80px;
+  top: 79px;
   right: 0;
   width: 150px;
   background-color: ${props => props.theme === 'light'
-          ? '#7ba884' : mainTheme.colors.accentLight};
+          ? 'rgba(255,255,255,0.18)' : mainTheme.colors.accentLight};
+  padding: 15px 0;
+  box-shadow: inset 0 5px 15px 0 rgba(0, 0, 0, 0.20);
   
 
 `

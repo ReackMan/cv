@@ -20,11 +20,12 @@ function App() {
 
         <StyledApp>
             <ThemeProvider theme={themeMode}>
-                    <GlobalStyle customTheme={theme}/>
-                    <Header theme={theme} themeToggle={themeToggle} />
-                    <Main theme={theme}/>
-                    <Footer theme={theme}/>
-                    <GoTopBtn theme={theme}/>
+                <GlobalStyle customTheme={theme}/>
+                <Header theme={theme} themeToggle={themeToggle}/>
+                <Main theme={theme}/>
+                {/*<div>height {height} width {width}</div>*/}
+                <Footer theme={theme}/>
+                <GoTopBtn theme={theme}/>
             </ThemeProvider>
         </StyledApp>
 
@@ -45,6 +46,10 @@ const StyledApp = styled.div`
   background-image: url(${drawing});
   background-position: 120% 20%;
   background-repeat: no-repeat;
+
+    @media screen and (max-width: 767px){
+        background-image: none;
+    }
 `
 
 export default App;

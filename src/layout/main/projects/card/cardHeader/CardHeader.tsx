@@ -7,12 +7,15 @@ type HeaderPropsType = {
     imgAlt: string
     titleSize: string
     theme: any
+    href: string
 }
 
 export const CardHeader = (props: HeaderPropsType) => {
-    return <StyledCardHeader titleSize={props.titleSize} theme={props.theme}>
-        <img src={props.imgSrc} alt="image card"/>
-        <h3>{props.headerText}</h3>
-    </StyledCardHeader>
+    return (
+        <StyledCardHeader titleSize={props.titleSize} theme={props.theme}>
+            <a href={props.href}><img src={props.imgSrc} alt="image card"/></a>
+            <h3>{props.headerText}</h3>
+        </StyledCardHeader>
+    )
 }
 

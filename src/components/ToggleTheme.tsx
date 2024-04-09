@@ -68,8 +68,9 @@ export const ToggleBtn = (props: any) => {
         <Label placeBtn={props.placeBtn}>
             <Input theme={props.theme} type='checkbox' onChange={() => props.themeToggle()}/>
             <Slider theme={props.theme}>
-                <Icon iconId={props.theme === 'light' ? 'moon' : 'sun2'} width='80px'
-                      height='40px' viewBox={props.theme === 'light' ? '18.6 -3 94 70' : '-15 2 55 60'}/>
+                <Icon iconId={props.theme !== 'light' ? 'moon' : 'sun2'} width='80px'
+                      // height='40px' viewBox={props.theme === 'light' ? '18.6 -3 94 70' : '-15 2 55 60'}/>
+                      height='40px' viewBox={props.theme === 'light' ? '-16 2 55 60' : '18.6 -3 94 70'}/>
             </Slider>
         </Label>
     )

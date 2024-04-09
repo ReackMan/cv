@@ -27,19 +27,29 @@ const WorkExperience = (props: any) => {
     //     return () => ctx.revert();
     // }, []);
 
+    const workPlaces = [
+        {
+            position: 'Junior Web Developer',
+            schedule: 'Full Time',
+            orgName: 'LLC "Гарант-СП"',
+            place: 'Sergiev Posad',
+            dates: 'Apr 2022 - Jul 2023'
+        },
+        {
+            position: 'Junior Web Developer',
+            schedule: 'Full Time',
+            orgName: 'Freelancehunt.ru',
+            place: 'Freelance',
+            dates: 'May 2019 - Feb 2020'
+        }
+    ]
 
     return (
-        <StyledWorkExperience theme={props.theme}>
+        <StyledWorkExperience>
             <h2>Work Experience</h2>
-            <WorkPlace position='Junior Web Developer' schedule='Full Time'
-                       orgName='Dr. Rajkumar’s Learning App' place='Bengaluru'
-                       dates='Sep 2021 - Dec 2021' theme={props.theme} queue='1'/>
-            <WorkPlace position='Web Development Intern' schedule='Internship'
-                       orgName='IonPixelz Web Solutions' place='Bengaluru'
-                       dates='Sep 2021 - Dec 2021' theme={props.theme} queue='2'/>
-            <WorkPlace position='SEO / SEM Specialist' schedule='Internship'
-                       orgName='HAAPS' place='Bengaluru'
-                       dates='Sep 2021 - Dec 2021' theme={props.theme} queue='3'/>
+            {workPlaces.map((p, index) =>
+                <WorkPlace position={p.position} schedule={p.schedule} place={p.place}
+                           orgName={p.orgName} dates={p.dates} queue={`${index}`} theme={props.theme} /> )}
         </StyledWorkExperience>
     )
 }
