@@ -10,13 +10,14 @@ type StyledLinkPropsType = {
     theme: any
     href: string
     fill?: string
+    target?: string
 }
 
 const Link = (props: StyledLinkPropsType) => {
 
     return (
         <StyledLink theme={props.theme}>
-            <Logo iconId={props.iconId} width={props.width} height={props.height}
+            <Logo iconId={props.iconId} width={props.width} height={props.height} target={props.target}
                   viewBox={props.viewBox} text={props.text} href={props.href} fill={props.fill}/>
         </StyledLink>
     )

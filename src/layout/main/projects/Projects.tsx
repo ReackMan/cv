@@ -6,7 +6,6 @@ import counter from '../../../assets/images/counter.png'
 import {ProjectsHeader, StyledCards, StyledProjects} from "./StyledProjects";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {TechIconAnimation} from "../../../animations/Animations";
 
 const cardInfo = [
     {
@@ -30,8 +29,8 @@ const cardInfo = [
         stackText: 'Typescript, React, Redux, React Router, Jest, CSS modules',
         imgSrc: socNet,
         titleSize: '28px',
-        gitHub: 'https://github.com/ReackMan/todolist',
-        href: 'https://reackman.github.io/todolist'
+        gitHub: 'https://github.com/ReackMan/Reackman-s-Social-Network',
+        href: 'https://reackman.github.io/Reackman-s-Social-Network'
     },
     {
         cardText: `A small project of the counter on the React library, data is written 
