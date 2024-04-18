@@ -33,7 +33,7 @@ const WorkExperience = (props: any) => {
             schedule: 'Full Time',
             orgName: 'LLC "Гарант-СП"',
             place: 'Sergiev Posad',
-            dates: 'Apr 2022 - Jul 2023'
+            dates: 'Jul 2023 - Jan 2024'
         },
         {
             position: 'Junior Web Developer',
